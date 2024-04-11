@@ -1,0 +1,30 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/program-control-template`,
+    require('./programControlTemplateCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/program-control-template/:id`,
+    require('./programControlTemplateUpdate').default,
+  );
+  app.post(
+    `/tenant/:tenantId/program-control-template/import`,
+    require('./programControlTemplateImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/program-control-template`,
+    require('./programControlTemplateDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/program-control-template/autocomplete`,
+    require('./programControlTemplateAutocomplete').default,
+  );
+  app.get(
+    `/tenant/:tenantId/program-control-template`,
+    require('./programControlTemplateList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/program-control-template/:id`,
+    require('./programControlTemplateFind').default,
+  );
+};

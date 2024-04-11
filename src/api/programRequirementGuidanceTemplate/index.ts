@@ -1,0 +1,37 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/program-requirement-guidance-template`,
+    require('./programRequirementGuidanceTemplateCreate')
+      .default,
+  );
+  app.put(
+    `/tenant/:tenantId/program-requirement-guidance-template/:id`,
+    require('./programRequirementGuidanceTemplateUpdate')
+      .default,
+  );
+  app.post(
+    `/tenant/:tenantId/program-requirement-guidance-template/import`,
+    require('./programRequirementGuidanceTemplateImport')
+      .default,
+  );
+  app.delete(
+    `/tenant/:tenantId/program-requirement-guidance-template`,
+    require('./programRequirementGuidanceTemplateDestroy')
+      .default,
+  );
+  app.get(
+    `/tenant/:tenantId/program-requirement-guidance-template/autocomplete`,
+    require('./programRequirementGuidanceTemplateAutocomplete')
+      .default,
+  );
+  app.get(
+    `/tenant/:tenantId/program-requirement-guidance-template`,
+    require('./programRequirementGuidanceTemplateList')
+      .default,
+  );
+  app.get(
+    `/tenant/:tenantId/program-requirement-guidance-template/:id`,
+    require('./programRequirementGuidanceTemplateFind')
+      .default,
+  );
+};

@@ -1,0 +1,30 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/email-template`,
+    require('./emailTemplateCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/email-template/:id`,
+    require('./emailTemplateUpdate').default,
+  );
+  app.post(
+    `/tenant/:tenantId/email-template/import`,
+    require('./emailTemplateImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/email-template`,
+    require('./emailTemplateDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/email-template/autocomplete`,
+    require('./emailTemplateAutocomplete').default,
+  );
+  app.get(
+    `/tenant/:tenantId/email-template`,
+    require('./emailTemplateList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/email-template/:id`,
+    require('./emailTemplateFind').default,
+  );
+};

@@ -1,0 +1,22 @@
+export default (app) => {
+  app.get(
+    `/tenant/:tenantId/role/summary`,
+    require('./roleSummary').default,
+  );
+  app.get(
+    `/tenant/:tenantId/role/assigned/:role`,
+    require('./roleAssigned').default,
+  );
+  app.get(
+    `/tenant/:tenantId/role/unassigned/:role`,
+    require('./roleUnassigned').default,
+  );
+  app.post(
+    `/tenant/:tenantId/role/add/:role`,
+    require('./roleAdd').default,
+  );
+  app.post(
+    `/tenant/:tenantId/role/remove/:role`,
+    require('./roleRemove').default,
+  );
+};

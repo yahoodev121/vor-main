@@ -1,0 +1,30 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/project-status`,
+    require('./projectStatusCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/project-status/:id`,
+    require('./projectStatusUpdate').default,
+  );
+  app.post(
+    `/tenant/:tenantId/project-status/import`,
+    require('./projectStatusImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/project-status`,
+    require('./projectStatusDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/project-status/autocomplete`,
+    require('./projectStatusAutocomplete').default,
+  );
+  app.get(
+    `/tenant/:tenantId/project-status`,
+    require('./projectStatusList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/project-status/:id`,
+    require('./projectStatusFind').default,
+  );
+};

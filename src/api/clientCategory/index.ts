@@ -1,0 +1,30 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/client-category`,
+    require('./clientCategoryCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/client-category/:id`,
+    require('./clientCategoryUpdate').default,
+  );
+  app.post(
+    `/tenant/:tenantId/client-category/import`,
+    require('./clientCategoryImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/client-category`,
+    require('./clientCategoryDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/client-category/autocomplete`,
+    require('./clientCategoryAutocomplete').default,
+  );
+  app.get(
+    `/tenant/:tenantId/client-category`,
+    require('./clientCategoryList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/client-category/:id`,
+    require('./clientCategoryFind').default,
+  );
+};

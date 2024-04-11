@@ -1,0 +1,30 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/qalibrary`,
+    require('./qaLibraryCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/qalibrary/:id`,
+    require('./qaLibraryUpdate').default,
+  );
+  app.post(
+    `/tenant/:tenantId/qalibrary/import`,
+    require('./qaLibraryImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/qalibrary`,
+    require('./qaLibraryDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/qalibrary/autocomplete`,
+    require('./qaLibraryAutocomplete').default,
+  );
+  app.get(
+    `/tenant/:tenantId/qalibrary`,
+    require('./qaLibraryList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/qalibrary/:id`,
+    require('./qaLibraryFind').default,
+  );
+};

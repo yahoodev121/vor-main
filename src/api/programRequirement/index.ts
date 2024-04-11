@@ -1,0 +1,34 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/program-requirement`,
+    require('./programRequirementCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/program-requirement/:id`,
+    require('./programRequirementUpdate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/program-requirement/:id/tags`,
+    require('./programRequirementTags').default,
+  );
+  app.post(
+    `/tenant/:tenantId/program-requirement/import`,
+    require('./programRequirementImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/program-requirement`,
+    require('./programRequirementDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/program-requirement/autocomplete`,
+    require('./programRequirementAutocomplete').default,
+  );
+  app.get(
+    `/tenant/:tenantId/program-requirement`,
+    require('./programRequirementList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/program-requirement/:id`,
+    require('./programRequirementFind').default,
+  );
+};

@@ -1,0 +1,31 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/program-requirement-template`,
+    require('./programRequirementTemplateCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/program-requirement-template/:id`,
+    require('./programRequirementTemplateUpdate').default,
+  );
+  app.post(
+    `/tenant/:tenantId/program-requirement-template/import`,
+    require('./programRequirementTemplateImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/program-requirement-template`,
+    require('./programRequirementTemplateDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/program-requirement-template/autocomplete`,
+    require('./programRequirementTemplateAutocomplete')
+      .default,
+  );
+  app.get(
+    `/tenant/:tenantId/program-requirement-template`,
+    require('./programRequirementTemplateList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/program-requirement-template/:id`,
+    require('./programRequirementTemplateFind').default,
+  );
+};

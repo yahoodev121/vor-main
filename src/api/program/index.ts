@@ -1,0 +1,34 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/program`,
+    require('./programCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/program/:id`,
+    require('./programUpdate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/program/:id/tags`,
+    require('./programTags').default,
+  );
+  app.post(
+    `/tenant/:tenantId/program/import`,
+    require('./programImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/program`,
+    require('./programDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/program/autocomplete`,
+    require('./programAutocomplete').default,
+  );
+  app.get(
+    `/tenant/:tenantId/program`,
+    require('./programList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/program/:id`,
+    require('./programFind').default,
+  );
+};

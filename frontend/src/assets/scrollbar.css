@@ -1,0 +1,127 @@
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6.4px;
+  height: 6.4px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4.8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 4.8px;
+}
+
+/* Chrome, Edge, and Safari */
+.primary-scrollbar::-webkit-scrollbar-track,
+.primary-scrollbar *::-webkit-scrollbar-track {
+  background: rgba(233, 30, 99, 0.1) !important;
+}
+
+.primary-scrollbar::-webkit-scrollbar-thumb,
+.primary-scrollbar *::-webkit-scrollbar-thumb {
+  background-color: rgba(233, 30, 99, 0.8) !important;
+}
+
+.primary-scrollbar::-webkit-scrollbar-thumb:hover,
+.primary-scrollbar *::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(233, 30, 99, 1) !important;
+}
+
+/* Chrome, Edge, and Safari */
+.secondary-scrollbar::-webkit-scrollbar-track,
+.secondary-scrollbar *::-webkit-scrollbar-track {
+  background: rgba(123, 128, 154, 0.1) !important;
+}
+
+.secondary-scrollbar::-webkit-scrollbar-thumb,
+.secondary-scrollbar *::-webkit-scrollbar-thumb {
+  background-color: rgba(123, 128, 154, 0.8) !important;
+}
+
+.secondary-scrollbar::-webkit-scrollbar-thumb:hover,
+.secondary-scrollbar *::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(123, 128, 154, 1) !important;
+}
+
+/* Chrome, Edge, and Safari */
+.info-scrollbar::-webkit-scrollbar-track,
+.info-scrollbar *::-webkit-scrollbar-track {
+  background: rgba(26, 115, 232, 0.1) !important;
+}
+
+.info-scrollbar::-webkit-scrollbar-thumb,
+.info-scrollbar *::-webkit-scrollbar-thumb {
+  background-color: rgba(26, 115, 232, 0.8) !important;
+}
+
+.info-scrollbar::-webkit-scrollbar-thumb:hover,
+.info-scrollbar *::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(26, 115, 232, 1) !important;
+}
+
+/* Chrome, Edge, and Safari */
+.success-scrollbar::-webkit-scrollbar-track,
+.success-scrollbar *::-webkit-scrollbar-track {
+  background: rgba(102, 187, 106, 0.1) !important;
+}
+
+.success-scrollbar::-webkit-scrollbar-thumb,
+.success-scrollbar *::-webkit-scrollbar-thumb {
+  background-color: rgba(102, 187, 106, 0.8) !important;
+}
+
+.success-scrollbar::-webkit-scrollbar-thumb:hover,
+.success-scrollbar *::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(102, 187, 106, 1) !important;
+}
+
+/* Chrome, Edge, and Safari */
+.warning-scrollbar::-webkit-scrollbar-track,
+.warning-scrollbar *::-webkit-scrollbar-track {
+  background: rgba(251, 140, 0, 0.1) !important;
+}
+
+.warning-scrollbar::-webkit-scrollbar-thumb,
+.warning-scrollbar *::-webkit-scrollbar-thumb {
+  background-color: rgba(251, 140, 0, 0.8) !important;
+}
+
+.warning-scrollbar::-webkit-scrollbar-thumb:hover,
+.warning-scrollbar *::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(251, 140, 0, 1) !important;
+}
+
+/* Chrome, Edge, and Safari */
+.error-scrollbar::-webkit-scrollbar-track,
+.error-scrollbar *::-webkit-scrollbar-track {
+  background: rgba(244, 67, 53, 0.1) !important;
+}
+
+.error-scrollbar::-webkit-scrollbar-thumb,
+.error-scrollbar *::-webkit-scrollbar-thumb {
+  background-color: rgba(244, 67, 53, 0.8) !important;
+}
+
+.error-scrollbar::-webkit-scrollbar-thumb:hover,
+.error-scrollbar *::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(244, 67, 53, 1) !important;
+}
+
+/* Chrome, Edge, and Safari */
+.purple-scrollbar::-webkit-scrollbar-track,
+.purple-scrollbar *::-webkit-scrollbar-track {
+  background: rgba(108, 101, 249, 0.1) !important;
+}
+
+.purple-scrollbar::-webkit-scrollbar-thumb,
+.purple-scrollbar *::-webkit-scrollbar-thumb {
+  background-color: rgba(109, 101, 249, 0.8) !important;
+}
+
+.purple-scrollbar::-webkit-scrollbar-thumb:hover,
+.purple-scrollbar *::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(109, 101, 249, 1) !important;
+}

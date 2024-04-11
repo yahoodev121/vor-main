@@ -1,0 +1,30 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/questionnaire-template`,
+    require('./questionnaireTemplateCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/questionnaire-template/:id`,
+    require('./questionnaireTemplateUpdate').default,
+  );
+  app.post(
+    `/tenant/:tenantId/questionnaire-template/import`,
+    require('./questionnaireTemplateImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/questionnaire-template`,
+    require('./questionnaireTemplateDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/questionnaire-template/autocomplete`,
+    require('./questionnaireTemplateAutocomplete').default,
+  );
+  app.get(
+    `/tenant/:tenantId/questionnaire-template`,
+    require('./questionnaireTemplateList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/questionnaire-template/:id`,
+    require('./questionnaireTemplateFind').default,
+  );
+};
